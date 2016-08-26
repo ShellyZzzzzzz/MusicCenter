@@ -161,13 +161,13 @@ body,div,p,a,img,input,form,span,ul,li{
 }
 
 #left_div{
-	left: -446px;
+	left: -445px;
 	top: 150px;
 	border-right: 4px solid rgb(45,47,49);
 }
 
 #right_div{
-	right: -453px;
+	right: -451px;
 	top: 150px;
 	border-left: 4px solid rgb(45,47,49);
 }
