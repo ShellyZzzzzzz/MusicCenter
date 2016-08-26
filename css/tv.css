@@ -1,0 +1,182 @@
+body,div,p,a,img,input,form,span,ul,li{
+	padding: 0;
+	margin: 0;
+	font-family: "Microsoft YaHei";
+	font-weight: normal;
+	font-size: 20px;
+}
+
+#tv{
+	width: 1120px;
+	height: 730px;
+	background-image: url(../img/tv.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#main{
+	width: 968px;
+	height: 547px;
+	margin: 59px 0 0 79px;
+	background-color: rgb(95,134,170);
+	overflow: hidden;
+}
+#main header ul{
+	list-style: none;
+	height: 50px;
+	margin: 50px 0 10px 0;
+	line-height: 50px;
+	overflow: hidden;
+	padding-left: 80px;
+	background-image: url(../img/yinyue.png);
+	background-repeat: no-repeat;
+	background-position: 30px -10px;
+}
+#main header li{
+	line-height: 50px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#main header li:after{
+	position: absolute;
+	margin-top: 17px;
+	line-height: 20px;
+	content: " ";
+	display: inline-block;
+	width: 1px;
+	height: 20px;
+	border-right: 2px solid #000000;
+	margin-left: 12px;
+}
+#main header li:last-of-type:after{
+	content: " ";
+	display: none;
+}
+
+/*内容页*/
+#content{
+	height: 387px;
+	width: 100%;
+}
+
+#content>div {
+	position: absolute;
+}
+
+.siderbar {
+	float: left;
+	padding-top: 100px;
+}
+
+.siderbar li {
+	margin: 10px 0;
+	padding: 0 20px;
+	list-style-position: inside;
+}
+
+#siderbar-lg {
+	position: absolute;
+	left: -110px;
+}
+
+.collect {
+	list-style-image: url('../img/collect.png');
+}
+
+.history {
+	list-style-image: url('../img/history.png');
+}
+
+.search {
+	list-style-image: url('../img/search.png');
+}
+
+.combinations {
+	float: left;
+}
+
+.combination {
+	background-color: #e1e1e1;
+	margin: 10px 10px 10px 0;
+	text-align: center;
+}
+
+.left {
+	display: inline-block;
+	margin: 0 5px 10px 0;
+}
+
+.right {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+
+.combination1 {
+	width: 250px;
+	height: 350px;
+}
+
+.combination2 {
+	width: 350px;
+	height: 170px;
+}
+
+.combination3 {
+	width: 170px;
+	height: 170px;
+}
+
+.combination4 {
+	width: 250px;
+	height: 170px
+}
+#footer{
+	height: 50px;
+	width: 100%;
+	border: 1px solid red;/*稍后删除*/
+	overflow: hidden;
+	padding-left: 20px;
+}
+#footer img{
+	display: inline-block;
+	width: 40px;
+	margin-left: 10px;
+	float: left;
+}
+#footer span{
+	float: left;
+	margin-left: 25%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#left_div,#right_div{
+	position: absolute;
+	width: 600px;
+	height: 420px;
+	background: #fff;
+	z-index: 1000;
+}
+
+#left_div{
+	left: -446px;
+	top: 150px;
+	border-right: 4px solid rgb(45,47,49);
+}
+
+#right_div{
+	right: -453px;
+	top: 150px;
+	border-left: 4px solid rgb(45,47,49);
+}
+
+#inner_left_div{
+	position: absolute;
+	width: 80px;
+	height: 350px;
+	background: #5f86aa;
+	z-index: 1000;
+	top: 179px;
+}
