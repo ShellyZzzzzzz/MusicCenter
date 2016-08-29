@@ -2,7 +2,7 @@ $(document).ready(function($) {
 	$('#inner_left_div').hide();
 
 	$('#siderbar-sm').children('li').mouseenter(function(event) {
-		// $('#siderbar-sm').children('li').css('background', 'rgb(2,26,89)');
+		$('#siderbar-sm').css('visibility', 'hidden');
 		$('#siderbar-lg').animate({left: 0}, 500, function() {
 			$('#siderbar-sm').width(135);
 		});
@@ -10,7 +10,7 @@ $(document).ready(function($) {
 
 	$('#siderbar-lg').mouseout(function(event) {
 		$('#siderbar-lg').animate({left: -110}, 500, function() {
-			// $('#siderbar-sm').children('li').css('background-color', 'transparent');
+			$('#siderbar-sm').css('visibility', 'visible');
 			$('#siderbar-sm').width(95);
 		});
 	});
