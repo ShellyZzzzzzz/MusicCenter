@@ -80,6 +80,9 @@ $(document).ready(function($) {
         			if(t.index(curElement) >= 1) {
         				curElement = t.eq(0);
         				selectCbt(curElement);
+        			} else {
+        				curSection = 0;
+        				
         			}
             	}
         		break;
