@@ -4,6 +4,7 @@ body,div,p,a,img,input,form,span,ul,li{
 	font-family: "Microsoft YaHei";
 	font-weight: normal;
 	font-size: 20px;
+	color: #efefff;
 }
 
 #tv{
@@ -15,13 +16,15 @@ body,div,p,a,img,input,form,span,ul,li{
 	margin: 0 auto;
 	overflow: hidden;
 }
+
 #main{
 	width: 968px;
 	height: 547px;
 	margin: 59px 0 0 79px;
-	background-color: rgb(95,134,170);
+	background-image: url(../img/bg.jpg);
 	overflow: hidden;
 }
+
 #main header ul{
 	list-style: none;
 	height: 50px;
@@ -71,9 +74,11 @@ body,div,p,a,img,input,form,span,ul,li{
 }
 
 .siderbar li {
-	margin: 10px 0;
-	padding: 0 20px;
-	list-style-position: inside;
+	margin: 10px 0 10px 30px;
+	padding: 0 30px 0 40px;
+	height: 35px;
+	line-height: 35px;
+	list-style: none;
 }
 
 #siderbar-lg {
@@ -82,15 +87,15 @@ body,div,p,a,img,input,form,span,ul,li{
 }
 
 .collect {
-	list-style-image: url('../img/collect.png');
+	background: url('../img/collect.png') no-repeat left center;
 }
 
 .history {
-	list-style-image: url('../img/history.png');
+	background: url('../img/history.png') no-repeat left center;
 }
 
 .search {
-	list-style-image: url('../img/search.png');
+	background: url('../img/search.png') no-repeat left center;
 }
 
 .combinations {
@@ -176,7 +181,7 @@ body,div,p,a,img,input,form,span,ul,li{
 	position: absolute;
 	width: 80px;
 	height: 350px;
-	background: #5f86aa;
+	background-color: rgb(2,26,89);
 	z-index: 1000;
 	top: 179px;
 }
