@@ -36,8 +36,13 @@ $(document).ready(function($) {
 	});
 
 	//版块选择事件
+	var curSection = 2;
+	var curElement = $('.combination').eq(2);
+	var sctNum = $('header').find('li').length;
+	var cbtNum = $('.combination').length;
 	$(document).keydown(function(e) {
 		e = e || window.event;
+		e.preventDefault();
         switch (e.keyCode) {
         	case 37: {//左
         		break;
@@ -46,6 +51,29 @@ $(document).ready(function($) {
         		break;
         	}
         	case 39: {//右
+        		if(curSection == 0) {
+
+        		} else if(curSection == 1){
+        			
+        		} else {
+        			curElement.css('border', 'none');
+        			if(curElement.attr('class').indexOf('left') == -1) {
+        				var p = curElement.parent()
+        				var tc = p.children().index(curElement);
+        				var tn = p.next().children();
+        				if(tn.length >= 1) {
+        					curElement = (tc > 0 && tn.length > 1) ? tn.eq(1) : tn.eq(0);
+        				}
+        			} else {
+        				var tn = curElement.next();
+        				if(tn.length != 0) {
+        					curElement = curElement.next();	
+        				}
+        			}
+        			if(curElement.length != 0) {
+        				selectCbt(curElement);
+        			}
+        		}
         		break;
         	}
         	case 40: {//下
@@ -54,3 +82,9 @@ $(document).ready(function($) {
         }
 	});
 });
+
+function selectCbt(curElement) {
+	curElement.css('border', '2px solid red');
+	var l = - (curElement[0].offsetLeft - $('#siderbar-sm').width() - curElement.width()) ;
+	$('#content').children('div').animate({left: l}, 500);
+}
