@@ -52,7 +52,7 @@ $(document).ready(function($) {
         				curElement.css('border', '1px solid red');	
         			} else {
 	        			if(curElement.attr('class').indexOf('right') == -1) {
-	        				var p = curElement.parent()
+	        				var p = curElement.parent();
 	        				var tc = p.children().index(curElement);
 	        				var tp = p.prev().children();
 	        				if(tp.length >= 1) {
@@ -72,6 +72,16 @@ $(document).ready(function($) {
         		break;
         	}
             case 38: {//上
+            	curElement.css('border', 'none');
+            	if(curSection == 1) {
+
+            	} else if(curSection == 2) {
+            		var t = curElement.parent().children();
+        			if(t.index(curElement) >= 1) {
+        				curElement = t.eq(0);
+        				selectCbt(curElement);
+        			}
+            	}
         		break;
         	}
         	case 39: {//右
@@ -107,6 +117,19 @@ $(document).ready(function($) {
         		break;
         	}
         	case 40: {//下
+        		curElement.css('border', 'none');
+
+        		if(curSection == 0) {
+
+        		} else if(curSection == 1) {
+
+        		} else {
+        			var t = curElement.parent().children();
+        			if(t.index(curElement) == 0) {
+        				curElement = curElement.next();
+        				selectCbt(curElement);
+        			}
+        		}
         		break;
         	}
         }
