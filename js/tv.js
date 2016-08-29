@@ -1,17 +1,17 @@
 $(document).ready(function($) {
 	$('#inner_left_div').hide();
 
-	$('#siderbar-sm').children('li').mouseenter(function(event) {
+	$('#siderbar-sm').children('li').click(function(event) {
 		$('#siderbar-sm').css('visibility', 'hidden');
 		$('#siderbar-lg').animate({left: 0}, 500, function() {
 			$('#siderbar-sm').width(135);
 		});
 	});
 
-	$('#siderbar-lg').mouseout(function(event) {
+	$('#siderbar-lg').click(function(event) {
 		$('#siderbar-lg').animate({left: -110}, 500, function() {
-			$('#siderbar-sm').css('visibility', 'visible');
 			$('#siderbar-sm').width(95);
+			$('#siderbar-sm').css('visibility', 'visible');
 		});
 	});
 
