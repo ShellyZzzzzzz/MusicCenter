@@ -142,8 +142,12 @@ $(document).ready(function($) {
         					curElement = $('.section2').children().eq(0);
         					break;
         				}
+                        case "dance": {
+                            curElement = $('.section3').children().eq(0);
+                            break;
+                        }
         			}
-        			selectCbt(curElement);
+                    selectCbt(curElement);
 
         		} else if(curSection == 1) {
             		var tn = curElement.next();
@@ -173,7 +177,7 @@ function selectCbt(curElement) {
 	curElement.css('border', '2px solid #fff');
 
     var w = curElement.children('img').width();
-    curElement.children('img').width(w + 20);
+    curElement.children('img').width(w + 10);
 
 	if($('.combination').index(curElement) == 0) {
 		selectListen();
@@ -204,6 +208,10 @@ function selectSec(curElement, isFrom0) {
 				selectPlay();
 				break;
 			}
+            case 3: {
+                selectDance();
+                break;
+            }
 		}
 	}
 }
@@ -213,7 +221,7 @@ function cancelSelect(curElement, curSection) {
         curElement.css('border', 'none');
 
         var w = curElement.children('img').width();
-        curElement.children('img').width(w - 20);
+        curElement.children('img').width(w - 10);
     } else {
         curElement.css({
             'color': '#efefff',
@@ -254,4 +262,10 @@ function selectPlay() {
 	$('#inner_left_div').show(50, function() {
 		$('#content').children('div').animate({left: -1258}, 500);
 	});;
+}
+
+function selectDance() {
+    $('#inner_left_div').show(50, function() {
+        $('#content').children('div').animate({left: -2038}, 500);
+    });;
 }
