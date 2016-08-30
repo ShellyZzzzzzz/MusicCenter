@@ -178,16 +178,16 @@ function selectCbt(curElement) {
 		selectListen();
 		$('#inner_left_div').hide();
 	} else {
-		var l = - (curElement[0].offsetLeft - $('#content').width() / 2);
+		var l = - (curElement[0].offsetLeft - $('#content').width()/2 + curElement.width()/2);
         $('#content').children('div').animate({left: l}, 500);
 	}
 }
 
 function selectSec(curElement, isFrom0) {
     curElement.css({
-            'color': 'rgb(157,85,255)',
-            'font-size': '22px'
-        });
+        'color': 'rgb(157,85,255)',
+        'font-size': '22px'
+    });
 	if(isFrom0) {
 		var sec = $('header').find('li').index(curElement);
 		switch(sec) {
@@ -238,19 +238,19 @@ function siderbarHide() {
 
 //导航栏事件
 function selectListen() {
-	$('#content').children('div').animate({left: 158}, 500, function() {
+	$('#content').children('div').animate({left: 0}, 500, function() {
 		$('#inner_left_div').hide(500);
 	});	
 }
 
 function selectWatch() {
 	$('#inner_left_div').show(50, function() {
-		$('#content').children('div').animate({left: -470}, 500);
+		$('#content').children('div').animate({left: -638}, 500);
 	});
 }
 
 function selectPlay() {
 	$('#inner_left_div').show(50, function() {
-		$('#content').children('div').animate({left: -1090}, 500);
+		$('#content').children('div').animate({left: -1258}, 500);
 	});;
 }
