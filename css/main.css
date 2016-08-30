@@ -51,6 +51,7 @@ header li:last-of-type:after{
 
 #content>div {
 	position: absolute;
+	width: 2500px;
 }
 
 .siderbar {
