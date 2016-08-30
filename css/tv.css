@@ -107,8 +107,8 @@ body,div,p,a,img,input,form,span,ul,li{
 	background-color: #e1e1e1;
 	margin: 10px 10px 10px 0;
 	text-align: center;
+	overflow: hidden;
 }
-
 .left {
 	display: inline-block;
 	margin: 0 5px 10px 0;
