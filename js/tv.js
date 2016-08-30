@@ -3,7 +3,8 @@ $(document).ready(function($) {
 
 	//版块选择事件
 	var curSection = 2;
-	var curElement = $('.combination').eq(2);
+	var curElement = $('.combination').eq(0);
+    selectCbt(curElement, curSection);
 	var sctNum = $('header').find('li').length;
 	var cbtNum = $('.combination').length;
 	$(document).keydown(function(e) {
@@ -14,19 +15,22 @@ $(document).ready(function($) {
         		if(curSection == 0) {
 					var tp = curElement.prev();
 					if(tp.length) {
-						curElement.css('border', 'none');
+						cancelSelect(curElement, curSection);
 						curElement = tp;
 						selectSec(curElement, true);
 					}
         		} else if(curSection == 2) {
-        			curElement.css('border', 'none');
+        			cancelSelect(curElement, curSection);
 
         			if($('.combination').index(curElement) == 0) {
         				curSection = 1
         				siderbarShow();
         				$('#inner_left_div').hide();
         				curElement = $('#siderbar-lg').children('li').eq(0);
-        				curElement.css('border', '1px solid red');	
+        				curElement.css({
+                            'color': 'rgb(157,85,255)',
+                            'font-size': '22px'
+                        });
         			} else {
 	        			if(curElement.attr('class').indexOf('right') == -1) {
 	        				var p = curElement.parent();
@@ -50,7 +54,7 @@ $(document).ready(function($) {
         	}
             case 38: {//上
             	if(curSection == 1) {
-            		curElement.css('border', 'none');
+            		cancelSelect(curElement, curSection);
             		var tp = curElement.prev();
             		if(tp.length == 0) {
             			curSection = 0;
@@ -59,11 +63,14 @@ $(document).ready(function($) {
             			selectSec(curElement);
             		} else {
             			curElement = tp;
-            			curElement.css('border', '1px solid red');
+            			curElement.css({
+                            'color': 'rgb(157,85,255)',
+                            'font-size': '22px'
+                        });
             		}
 
             	} else if(curSection == 2) {
-            		curElement.css('border', 'none');
+            		cancelSelect(curElement, curSection);
             		var t = curElement.parent().children();
         			if(t.index(curElement) >= 1) {
         				curElement = t.eq(0);
@@ -78,12 +85,12 @@ $(document).ready(function($) {
         		break;
         	}
         	case 39: {//右
-        		curElement.css('border', 'none');
+        		cancelSelect(curElement, curSection);
 
         		if(curSection == 0) {
         			var tn = curElement.next();
 					if(tn.length) {
-						curElement.css('border', 'none');
+						cancelSelect(curElement, curSection);
 						curElement = tn;
 						selectSec(curElement, true);
 					}
@@ -91,7 +98,7 @@ $(document).ready(function($) {
         			curSection = 2;
         			siderbarHide();
         			curElement = $('.combination').eq(0);
-        			curElement.css('border', '1px solid red');
+        			selectCbt(curElement);
         		} else {
         			$('#inner_left_div').show();
 
@@ -117,7 +124,7 @@ $(document).ready(function($) {
         	case 40: {//下        		
 
         		if(curSection == 0) {
-        			curElement.css('border', 'none');
+        			cancelSelect(curElement, curSection);
         			curSection = 2;
 
         			var sec = curElement.attr('id');
@@ -135,19 +142,22 @@ $(document).ready(function($) {
         					break;
         				}
         			}
-        			curElement.css('border', '1px solid red');
+        			selectCbt(curElement);
 
         		} else if(curSection == 1) {
             		var tn = curElement.next();
             		if(tn.length != 0) {
-            			curElement.css('border', 'none');
+            			cancelSelect(curElement, curSection);
             			curElement = tn;
-            			curElement.css('border', '1px solid red');
+            			curElement.css({
+                            'color': 'rgb(157,85,255)',
+                            'font-size': '22px'
+                        });
             		}
         		} else {
         			var t = curElement.parent().children();
         			if(t.index(curElement) == 0) {
-        				curElement.css('border', 'none');
+        				cancelSelect(curElement, curSection);
         				curElement = curElement.next();
         				selectCbt(curElement);
         			}
@@ -159,20 +169,26 @@ $(document).ready(function($) {
 });
 
 function selectCbt(curElement) {
-	curElement.css('border', '1px solid red');
+	curElement.css('border', '2px solid #fff');
+
+    var w = curElement.children('img').width();
+    curElement.children('img').width(w + 20);
+
 	if($('.combination').index(curElement) == 0) {
-		var l = - (curElement[0].offsetLeft - curElement.width());
+		selectListen();
 		$('#inner_left_div').hide();
 	} else {
 		var l = - (curElement[0].offsetLeft - $('#content').width() / 2);
+        $('#content').children('div').animate({left: l}, 500);
 	}
-	$('#content').children('div').animate({left: l}, 500);
 }
 
 function selectSec(curElement, isFrom0) {
-	curElement.css('border', '1px solid red');
+    curElement.css({
+            'color': 'rgb(157,85,255)',
+            'font-size': '22px'
+        });
 	if(isFrom0) {
-		curElement.css('border', '1px solid red');
 		var sec = $('header').find('li').index(curElement);
 		switch(sec) {
 			case 0: {
@@ -189,6 +205,20 @@ function selectSec(curElement, isFrom0) {
 			}
 		}
 	}
+}
+
+function cancelSelect(curElement, curSection) {
+    if(curSection == 2) {
+        curElement.css('border', 'none');
+
+        var w = curElement.children('img').width();
+        curElement.children('img').width(w - 20);
+    } else {
+        curElement.css({
+            'color': '#efefff',
+            'font-size': '20px'
+        });
+    }
 }
 
 //侧边栏事件
