@@ -1,5 +1,6 @@
 $(document).ready(function($) {
 	$('#inner_left_div').hide();
+    $('html').get(0).style.overflow = 'hidden';
 
 	//版块选择事件
 	var curSection = 2;
@@ -156,7 +157,7 @@ $(document).ready(function($) {
             		}
         		} else {
         			var t = curElement.parent().children();
-        			if(t.index(curElement) == 0) {
+        			if(t.index(curElement) == 0 && t.length != 1) {
         				cancelSelect(curElement, curSection);
         				curElement = curElement.next();
         				selectCbt(curElement);
