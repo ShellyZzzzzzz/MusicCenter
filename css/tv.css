@@ -12,8 +12,8 @@
 	width: 968px;
 	height: 547px;
 	margin: 59px 0 0 79px;
-	/*background-image: url(../img/bg.jpg);*/
-	background: -webkit-gradient(linear,0 0,0 100%,from(rgb(113,166,198)),to(rgb(94,133,172)));
+	background: -webkit-gradient(linear,0 0,0 100%,from(rgba(113,166,198,0.75)),to(rgba(94,133,172,1)));
+	background-repeat: repeat;
 	overflow: hidden;
 }
 

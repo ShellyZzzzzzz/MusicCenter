@@ -29,8 +29,8 @@ $(document).ready(function($) {
         				$('#inner_left_div').hide();
         				curElement = $('#siderbar-lg').children('li').eq(0);
         				curElement.css({
-                            'color': 'rgb(157,85,255)',
-                            'font-size': '18px'
+                            'background-color': '#fff',
+                            'box-shadow': '5px 5px 5px #333'                        
                         });
         			} else {
 	        			if(curElement.attr('class').indexOf('right') == -1) {
@@ -65,8 +65,8 @@ $(document).ready(function($) {
             		} else {
             			curElement = tp;
             			curElement.css({
-                            'color': 'rgb(157,85,255)',
-                            'font-size': '22px'
+                            'background-color': '#fff',
+                            'box-shadow': '5px 5px 5px #333'
                         });
             		}
 
@@ -155,8 +155,8 @@ $(document).ready(function($) {
             			cancelSelect(curElement, curSection);
             			curElement = tn;
             			curElement.css({
-                            'color': 'rgb(157,85,255)',
-                            'font-size': '22px'
+                            'background-color': '#fff',
+                            'box-shadow': '5px 5px 5px #333'
                         });
             		}
         		} else {
@@ -178,20 +178,21 @@ function selectCbt(curElement) {
 
     var w = curElement.children('img').width();
     curElement.children('img').width(w + 10);
+    curElement.css('box-shadow', '5px 5px 5px #333');
 
 	if($('.combination').index(curElement) == 0) {
 		selectListen();
 		$('#inner_left_div').hide();
 	} else {
-		var l = - (curElement[0].offsetLeft - $('#content').width()/2 + curElement.width()/2);
+		var l = - (curElement[0].offsetLeft - $('#content').width() / 2 + curElement.width() / 2);
         $('#content').children('div').animate({left: l}, 500);
 	}
 }
 
 function selectSec(curElement, isFrom0) {
     curElement.css({
-        'color': 'rgb(157,85,255)',
-        'font-size': '22px'
+        'background-color': '#fff',
+        'box-shadow': '5px 5px 5px #333'
     });
 	if(isFrom0) {
 		var sec = $('header').find('li').index(curElement);
@@ -222,10 +223,11 @@ function cancelSelect(curElement, curSection) {
 
         var w = curElement.children('img').width();
         curElement.children('img').width(w - 10);
+        curElement.css('box-shadow', 'none');
     } else {
         curElement.css({
-            'color': '#efefff',
-            'font-size': '20px'
+            'background-color': 'transparent',
+            'box-shadow': 'none'
         });
     }
 }
@@ -239,7 +241,7 @@ function siderbarShow() {
 }
 
 function siderbarHide() {
-	$('#siderbar-lg').animate({left: -110}, 500, function() {
+	$('#siderbar-lg').animate({left: -115}, 500, function() {
 		$('#siderbar-sm').width(95);
 		$('#siderbar-sm').css('visibility', 'visible');
 	});
