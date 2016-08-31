@@ -86,23 +86,23 @@ $(document).ready(function($) {
         		break;
         	}
         	case 39: {//右
-        		cancelSelect(curElement, curSection);
 
-        		if(curSection == 0) {
-        			var tn = curElement.next();
-					if(tn.length) {
-						cancelSelect(curElement, curSection);
-						curElement = tn;
-						selectSec(curElement, true);
-					}
-        		} else if(curSection == 1){
+                if(curSection == 0) {
+                    var tn = curElement.next();
+                    if(tn.length) {
+                        cancelSelect(curElement, curSection);
+                        curElement = tn;
+                        selectSec(curElement, true);
+                    }
+                } else if(curSection == 1){
+        		    cancelSelect(curElement, curSection);
         			curSection = 2;
         			siderbarHide();
         			curElement = $('.combination').eq(0);
         			selectCbt(curElement);
         		} else {
         			$('#inner_left_div').show();
-
+                    cancelSelect(curElement, curSection);
         			if(curElement.attr('class').indexOf('left') == -1) {
         				var p = curElement.parent()
         				var tc = p.children().index(curElement);
