@@ -184,7 +184,14 @@ function selectCbt(curElement) {
 		selectListen();
 		$('#inner_left_div').hide();
 	} else {
-		var l = - (curElement[0].offsetLeft - $('#content').width() / 2 + curElement.width() / 2);
+        var tcls = curElement.attr('class');
+        console.log(tcls);
+        if(tcls.indexOf('left') == -1 && tcls.indexOf('right') == -1) {
+            var tw = curElement.width() / 2;
+        } else {
+            var tw = curElement.width();
+        }
+		var l = - (curElement[0].offsetLeft - $('#content').width() / 2 + tw);
         $('#content').children('div').animate({left: l}, 500);
 	}
 }

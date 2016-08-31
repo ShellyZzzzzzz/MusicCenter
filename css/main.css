@@ -129,7 +129,6 @@ header li:last-of-type:after{
 	overflow: hidden;
 	padding-left: 25px;
 	background: #5e85b2;
-	/*box-shadow: 0 -1px 3px #fff;*/
 	border-top: 1px solid rgba(255,255,255,.7);
 }
 #footer img{
@@ -152,7 +151,7 @@ header li:last-of-type:after{
 	position: absolute;
 	width: 80px;
 	height: 360px;
-	background: -webkit-gradient(linear,0 0,0 100%,from(rgb(136,175,203)),to(rgb(101,140,177)));
+	background-image: url(../img/inner-l.jpg);
 	z-index: 1000;
 	top: 104px;
 }
@@ -160,7 +159,7 @@ header li:last-of-type:after{
 	position: absolute;
 	width: 30px;
 	height: 360px;
-	background: -webkit-gradient(linear,0 0,0 100%,from(rgb(136,175,203)),to(rgb(101,140,177)));
+	background-image: url(../img/inner-r.jpg);
 	z-index: 1000;
 	top: 104px;
 	left: 940px;
