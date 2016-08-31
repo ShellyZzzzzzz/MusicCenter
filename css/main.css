@@ -4,7 +4,9 @@ body,div,p,a,img,input,form,span,ul,li{
 	font-family: "Microsoft YaHei";
 	font-weight: normal;
 	font-size: 20px;
-	color: #efefff;
+	/*color: #efefff;*/
+	color: #5a2664;
+	font-weight:500;
 }
 
 header ul{
@@ -129,7 +131,8 @@ header li:last-of-type:after{
 	width: 100%;
 	overflow: hidden;
 	padding-left: 25px;
-	background-color: rgba(255,0,255,0.25);
+	/*background-color: rgba(255,0,255,0.25);*/
+	background: rgb(113,166,198);
 	border-top: 1px solid rgba(255,255,255,.7);
 }
 #footer img{
@@ -151,7 +154,7 @@ header li:last-of-type:after{
 	position: absolute;
 	width: 80px;
 	height: 360px;
-	background-color: rgb(142,191,208);
+	background: -webkit-gradient(linear,0 0,0 100%,from(rgb(109,159,192)),to(rgb(97,138,176)));
 	z-index: 1000;
 	top: 114px;
 }
@@ -159,7 +162,7 @@ header li:last-of-type:after{
 	position: absolute;
 	width: 30px;
 	height: 360px;
-	background-color: rgb(142,191,208);
+	background: -webkit-gradient(linear,0 0,0 100%,from(rgb(109,159,192)),to(rgb(97,138,176)));
 	z-index: 1000;
 	top: 114px;
 	left: 940px;

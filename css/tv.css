@@ -13,7 +13,7 @@
 	height: 547px;
 	margin: 59px 0 0 79px;
 	/*background-image: url(../img/bg.jpg);*/
-	background: rgb(142,191,208);
+	background: -webkit-gradient(linear,0 0,0 100%,from(rgb(113,166,198)),to(rgb(94,133,172)));
 	overflow: hidden;
 }
 
