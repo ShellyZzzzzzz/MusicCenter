@@ -30,7 +30,7 @@ $(document).ready(function($) {
         				curElement = $('#siderbar-lg').children('li').eq(0);
         				curElement.css({
                             'color': 'rgb(157,85,255)',
-                            'font-size': '22px'
+                            'font-size': '18px'
                         });
         			} else {
 	        			if(curElement.attr('class').indexOf('right') == -1) {

@@ -16,7 +16,7 @@ header ul{
 	padding-left: 80px;
 	background-image: url(../img/yinyue.png);
 	background-repeat: no-repeat;
-	background-position: 30px -10px;
+	background-position: 40px 10px;
 }
 
 header li{
@@ -65,7 +65,7 @@ header li:last-of-type:after{
 	height: 35px;
 	line-height: 35px;
 	list-style: none;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 #siderbar-lg {
@@ -151,7 +151,7 @@ header li:last-of-type:after{
 	position: absolute;
 	width: 80px;
 	height: 360px;
-	background-color: rgb(2,26,89);
+	background-color: rgb(142,191,208);
 	z-index: 1000;
 	top: 114px;
 }
@@ -159,7 +159,7 @@ header li:last-of-type:after{
 	position: absolute;
 	width: 30px;
 	height: 360px;
-	background-color: rgb(2,26,89);
+	background-color: rgb(142,191,208);
 	z-index: 1000;
 	top: 114px;
 	left: 940px;

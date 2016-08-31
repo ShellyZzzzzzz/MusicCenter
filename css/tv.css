@@ -12,7 +12,8 @@
 	width: 968px;
 	height: 547px;
 	margin: 59px 0 0 79px;
-	background-image: url(../img/bg.jpg);
+	/*background-image: url(../img/bg.jpg);*/
+	background: rgb(142,191,208);
 	overflow: hidden;
 }
 
